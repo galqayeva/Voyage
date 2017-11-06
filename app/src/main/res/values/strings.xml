@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">V0YAGE</string>
+
+    <string-array name="mtype">
+        <item>restaurant</item>
+        <item>food</item>
+        <item>lodging</item>
+        <item>store</item>
+        <item>point_of_interest</item>
+        <item>establishment</item>
+        <item>cafe</item>
+    </string-array>
+
+    <string-array name="mradius">
+        <item>1k meters</item>
+        <item>2k meters</item>
+        <item>3k meters</item>
+        <item>4k meters</item>
+        <item>5k meters</item>
+        <item>10k meters</item>
+        <item>15k meters</item>
+        <item>20k meters</item>
+        <item>25k meters</item>
+        <item>30k meters</item>
+        <item>40k meters</item>
+        <item>50k meters</item>
+
+
+    </string-array>
 </resources>

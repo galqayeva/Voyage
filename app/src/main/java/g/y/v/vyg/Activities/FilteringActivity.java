@@ -9,6 +9,9 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Spinner;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -40,13 +43,19 @@ public class FilteringActivity extends AppCompatActivity implements SwipeRefresh
     private ProgressDialog progressDialog;
     private SwipeRefreshLayout swipeRefreshLayout;
     DatabaseHelper myDB;
-    String url,Tag="salus";
+    String url,Tag="salus",type,radius="5000";
+    Button btnFilter;
+    Spinner spinnertype,spinnerRadius;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filtering);
 
+        btnFilter=(Button)findViewById(R.id.button4);
+        spinnerRadius=(Spinner)findViewById(R.id.spinner);
+        spinnertype=(Spinner)findViewById(R.id.spinner3);
 
         swipeRefreshLayout=(SwipeRefreshLayout)findViewById(R.id.swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(FilteringActivity.this);
@@ -62,9 +71,20 @@ public class FilteringActivity extends AppCompatActivity implements SwipeRefresh
         latitude = gpsTracker.getLocation().getLatitude();
         longitude = gpsTracker.getLocation().getLongitude();
 
-        url= Constants.gmApi(Double.toString(latitude),Double.toString(longitude),"500");
-        loadListview();
-        loadRestaurants();
+        btnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                radius=spinnerRadius.getSelectedItem().toString();
+                type=spinnertype.getSelectedItem().toString();
+                url= Constants.gmApi(Double.toString(latitude),Double.toString(longitude),radius,type);
+                loadListview();
+                loadRestaurants();
+
+            }
+        });
+
+
     }
 
 

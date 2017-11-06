@@ -10,4 +10,5 @@
     <color name="colorbuttonBorder">#FF4018</color>
     <color name="colorBlue">#4842f4</color>
     <color name="colorButtonTextColor">#ffffff</color>
+    <color name="white">#ffffff</color>
 </resources>
