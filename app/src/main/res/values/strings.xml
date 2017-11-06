@@ -12,6 +12,23 @@
     </string-array>
 
     <string-array name="mradius">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>20000</item>
+        <item>25000</item>
+        <item>30000</item>
+        <item>40000</item>
+        <item>50000</item>
+
+
+    </string-array>
+
+    <string-array name="raidus">
         <item>1k meters</item>
         <item>2k meters</item>
         <item>3k meters</item>
@@ -24,7 +41,5 @@
         <item>30k meters</item>
         <item>40k meters</item>
         <item>50k meters</item>
-
-
     </string-array>
 </resources>

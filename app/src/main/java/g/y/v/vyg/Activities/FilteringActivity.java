@@ -78,7 +78,7 @@ public class FilteringActivity extends AppCompatActivity implements SwipeRefresh
                 radius=spinnerRadius.getSelectedItem().toString();
                 type=spinnertype.getSelectedItem().toString();
                 url= Constants.gmApi(Double.toString(latitude),Double.toString(longitude),radius,type);
-                loadListview();
+                myDB.deleteAll();
                 loadRestaurants();
 
             }
@@ -95,7 +95,7 @@ public class FilteringActivity extends AppCompatActivity implements SwipeRefresh
         if(data.getCount() == 0)
         {
             progressDialog = new ProgressDialog(this);
-            progressDialog.setMessage("Getting Restaurants");
+            progressDialog.setMessage("Getting Places");
             progressDialog.show();
 
             StringRequest stringRequest=new StringRequest(Request.Method.POST, url,
