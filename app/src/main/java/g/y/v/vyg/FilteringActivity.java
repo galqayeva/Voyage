@@ -77,7 +77,7 @@ public class FilteringActivity extends AppCompatActivity implements SwipeRefresh
 
         if(data.getCount() == 0)
         {
-            progressDialog = new ProgressDialog(getApplicationContext());
+            progressDialog = new ProgressDialog(this);
             progressDialog.setMessage("Getting Restaurants");
             progressDialog.show();
 
