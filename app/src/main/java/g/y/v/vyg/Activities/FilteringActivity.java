@@ -1,20 +1,15 @@
-package g.y.v.vyg;
+package g.y.v.vyg.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.ProgressDialog;
 import android.database.Cursor;
 import android.location.Location;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -25,6 +20,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import g.y.v.vyg.Constants;
+import g.y.v.vyg.R;
 import g.y.v.vyg.Utils.DatabaseHelper;
 import g.y.v.vyg.Utils.GPSTracker;
 import g.y.v.vyg.Utils.Model;

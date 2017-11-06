@@ -20,21 +20,12 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_weight=".50"
                 android:text="Friend"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="16dp" />
 
-            <Button
-                android:id="@+id/addButton"
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="#0091EA"
-                android:textColor="@color/colorButtonTextColor"
-                tools:text="+" />
 
 
         </RelativeLayout>

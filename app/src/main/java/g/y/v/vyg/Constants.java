@@ -8,3 +8,5 @@ public class Constants {
         return url;
     }
 }
+
+//https://developers.google.com/places/web-service/search
