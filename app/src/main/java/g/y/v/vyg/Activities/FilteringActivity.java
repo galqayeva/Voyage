@@ -25,6 +25,7 @@ import java.util.List;
 
 import g.y.v.vyg.Constants;
 import g.y.v.vyg.R;
+import g.y.v.vyg.Utils.BaseActivity;
 import g.y.v.vyg.Utils.DatabaseHelper;
 import g.y.v.vyg.Utils.GPSTracker;
 import g.y.v.vyg.Utils.Model;
@@ -32,7 +33,7 @@ import g.y.v.vyg.Utils.MyAdapter;
 import g.y.v.vyg.Utils.MySingleTon;
 
 
-public class FilteringActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class FilteringActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     private GPSTracker gpsTracker;
     private Location mLocation;
@@ -52,6 +53,8 @@ public class FilteringActivity extends AppCompatActivity implements SwipeRefresh
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filtering);
+        toolBarInitialize(R.id.toolbar);
+        setTitle("Voyage");
 
         btnFilter=(Button)findViewById(R.id.button4);
         spinnerRadius=(Spinner)findViewById(R.id.spinner);
