@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">V0YAGE</string>
+    <string name="facebook_app_id">174703449778509</string>
+    <string name="fb_login_protocol_scheme">fb174703449778509</string>
 
     <string-array name="mtype">
         <item>restaurant</item>
